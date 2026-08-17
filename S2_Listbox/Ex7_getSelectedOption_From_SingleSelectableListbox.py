@@ -7,16 +7,23 @@ from selenium.webdriver.support.select import Select
 driver=webdriver.Chrome()
 driver.get("https://testautomationpractice.blogspot.com/")
 
-#1: identify listbox
 country=driver.find_element(By.XPATH,"//select[@id='country']")
-
-#2: Create object of Select class
 s=Select(country)
 
-#3: call select class methods to select options from listbox
-# s.select_by_visible_text("India")       #String text
-# s.select_by_value("uk")          #String value
-s.select_by_index(9)                #int index
+# s1=s.first_selected_option
+# actText=s1.text
+# print(actText)
+
+# s1=s.first_selected_option
+# print(s1.text)
+
+actText=s.first_selected_option.text
+print(actText)
+
+print(s.first_selected_option.text)
+
+
+
 
 time.sleep(10)
 

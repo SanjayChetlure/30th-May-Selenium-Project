@@ -8,15 +8,14 @@ driver=webdriver.Chrome()
 driver.get("https://testautomationpractice.blogspot.com/")
 
 #1: identify listbox
-country=driver.find_element(By.XPATH,"//select[@id='country']")
+colour=driver.find_element(By.XPATH,"//select[@id='colors']")
 
 #2: Create object of Select class
-s=Select(country)
+s=Select(colour)
 
 #3: call select class methods to select options from listbox
-# s.select_by_visible_text("India")       #String text
-# s.select_by_value("uk")          #String value
-s.select_by_index(9)                #int index
+s.select_by_visible_text("Green")
+s.select_by_visible_text("Blue")
 
 time.sleep(10)
 
