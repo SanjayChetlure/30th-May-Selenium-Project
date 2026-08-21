@@ -7,10 +7,10 @@ from selenium.webdriver.support.select import Select
 driver=webdriver.Chrome()
 driver.get("https://autotestsandbox.com/examples/nested-iframes")
 
-#Switch to frame
+#Switch to outer frame
 driver.switch_to.frame(0)
 
-#Switch to outer frame
+#Switch to inner frame
 driver.switch_to.frame(driver.find_element(By.XPATH,"//iframe[@title='Inner']"))
 
 InnerText=driver.find_element(By.XPATH,"//p[text()='Inner iframe content']").text

@@ -7,7 +7,7 @@ from selenium.webdriver.support.select import Select
 driver=webdriver.Chrome()
 driver.get("https://autotestsandbox.com/examples/nested-iframes")
 
-#Switch to frame
+#Switch to outer frame
 driver.switch_to.frame(0)
 
 #get text from outer from element
