@@ -12,15 +12,15 @@ class SwagLabLoginPage:
 
     #2: Initialize driver within Constructor
     def __init__(self,driver):
-        self.driver=driver
+        self.driver=driver        #instanceVariable=localVariable
 
 
     #3: perform action on webelements within method
-    def enterUN(self):
-        self.driver.find_element(By.XPATH,self.username).send_keys("standard_user")
+    def enterUN(self,UnValue):
+        self.driver.find_element(By.XPATH,self.username).send_keys(UnValue)
 
-    def enterPWD(self):
-        self.driver.find_element(By.XPATH, self.password).send_keys("secret_sauce")
+    def enterPWD(self,pwdValue):
+        self.driver.find_element(By.XPATH, self.password).send_keys(pwdValue)
 
     def clickOnLoginBtn(self):
         self.driver.find_element(By.XPATH,self.login).click()
